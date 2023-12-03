@@ -1,13 +1,202 @@
+*{
+  box-sizing:border-box;
+}
+
 body {
+  background-color: #aaaaaa;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+h1{
+  margin: 0;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.site-wrapper{
+  min-width: 95vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header{
+  display: flex;
+  height: 10vh;
+  align-items: center;
+  background-color: #eeeeee;
+}
+
+header a {
+  text-decoration: none;
+  color: #4d4d4d;
+  font-weight: 600;
+  margin-left: 40px;
+
+}
+
+nav{
+  display: flex;
+  margin-left: auto;
+  margin-right: 20px;
+}
+
+main{
+  width: 100%;
+  min-height: 85vh;
+  color: white;
+}
+
+footer{
+  background-color: #161616;
+  color: #aaaaaa;
+  display: flex;
+  height: 5vh;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.home-container{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 85vh;
+  background-image: url(./images/home-hero.png);
+  background-repeat:no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 0 40px;
+}
+
+.home-container h1{
+  text-shadow: 2px 2px black;
+}
+
+.home-container a{
+  margin: 0 auto;
+  margin-top: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  text-decoration: none;
+  width: 50%;
+  height: 60px;
+  background-color: rgb(252, 197, 77);
+  border-radius: 10px;
+  transition: background-color 0.2s ease;
+}
+
+.home-container a:hover{
+  background-color: rgb(204, 157, 54) ;
+}
+
+/*VAN PAGES*/
+
+.van-card{
+  max-width: 600px;
+}
+
+.van-card a {
+  color: #161616;
+  text-decoration: none;
+}
+
+.van-card img {
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+.van-list-container button {
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.van-type {
+  height: 34px;
+  padding: 6px 26px;
+  font-style: normal;
+  font-weight: 500;
+  border: none;
+  border-radius: 5px;
+  background-color: #ffead0;
+  color: #4d4d4d;
+  transition: 200ms all cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.van-type:hover {
+  color: #ffead0;
+}
+
+.van-type:focus {
+  outline: none;
+}
+
+.van-type.selected {
+  color: #ffead0;
+}
+
+.van-type.simple:hover,
+.van-type.simple.selected {
+  background-color: #e17654;
+}
+
+.van-type.rugged:hover,
+.van-type.rugged.selected {
+  background-color: #115e59;
+}
+
+.van-type.luxury:hover,
+.van-type.luxury.selected {
+  background-color: #161616;
+}
+
+.van-type.clear-filters {
+  margin-left: -20px;
+  height: 34px;
+  padding: 6px 26px;
+  font-style: normal;
+  font-weight: 500;
+  border: none;
+  border-radius: 5px;
+  background-color: white;
+  color: #4d4d4d;
+}
+
+.van-list-container {
+  padding-inline: 23px;
+  padding-bottom: 40px;
+}
+
+.van-list-filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.van-list-filter-buttons > a {
+  margin-right: 15px;
+}
+
+.van-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-items: center;
+  gap: 34px;
+  margin-top: 57px;
+  flex-shrink: 1;
 }
