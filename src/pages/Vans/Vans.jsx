@@ -33,7 +33,7 @@ export default function Vans() {
         : vans
 
     const vanElements = displayedVans.map(van => (
-        <div key = {van.id} className="van-card">
+        <div key = {van.id} class="van-card col-lg-3 col-md-6 col-sm-12">
             <Link
                 to = {van.id}
                 state = {{
