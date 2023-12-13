@@ -5,9 +5,8 @@ export default function NotFound() {
     return (
         <div>
             This page doesn't exist.
-            Go home:
             <br/>
-            <Link to="/">Go Home</Link>
+            <Link to="..">Return to Home</Link>
         </div>
     )
 }

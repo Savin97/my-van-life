@@ -41,7 +41,7 @@ export default function Vans() {
                     type: typeFilter
                 }}
                 >
-                <img src = {van.imageUrl} />
+                <img className="van-image" src={van.imageUrl} alt="Van"/>
                 <div className="van-info">
                     <h2>{van.name}</h2> 
                     <p>${van.price}/day</p>
@@ -50,7 +50,6 @@ export default function Vans() {
             </Link>
         </div>
     ))
-    console.log("V", vanElements)
 
     function changeFilter(key, value){
         setSearchParams( prevParams => {

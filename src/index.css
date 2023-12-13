@@ -1,31 +1,16 @@
 @media (min-width: 576px) {
-  body::before {
-    content: "SM";
-  }
 }
 
 @media (min-width: 768px) {
-  body::before {
-    content: "MD";
-  }
 }
 
 @media (min-width: 992px) {
-  body::before {
-    content: "LG";
-  }
 }
 
 @media (min-width: 1200px) {
-  body::before {
-    content: "XL";
-  }
 }
 
 @media (min-width: 1400px) {
-  body::before {
-    content: "XXL";
-  }
 }
 
 *{
@@ -150,9 +135,77 @@ footer{
   background-color: rgb(204, 157, 54) ;
 }
 
+/*About page*/
+.about-page-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+@media (min-width: 400px) {
+  .about-page-container img{
+    object-fit: cover;
+    height: 50vh;
+    width: 100%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .about-page-container img{
+    object-position:0 -260px;
+    object-fit: cover;
+    height: 50vh;
+    width: 100%;
+  }
+  
+}
+
+.about-page-content{
+  padding-top: 20px;
+  max-width: 80%;
+}
+
+.about-page-content h1{
+}
+
+.about-page-content p{
+  margin:auto;
+  text-align: center;
+  font-size: 20px;
+  max-width: 60%;
+  margin-bottom: 5px;
+}
+
+.about-page-cta{
+  padding-bottom: 20px;
+  margin:  20px;
+}
+
+.about-page-cta h2{
+  margin-bottom: 20px;
+}
+
+.about-page-cta a{
+  text-decoration: none;
+  background-color: rgb(252, 197, 77);
+  color: white;
+  padding: 10px 200px;
+  max-width: 300px;
+  border: 0;
+  border-radius: 10px;
+  min-height: 50px;
+}
+
+.about-page-cta a:hover{
+  background-color: rgb(204, 157, 54);
+}
+
 /*VAN PAGES*/
 
 .van-card{
+  margin-top: 0;
 }
 
 .van-card a {
@@ -171,7 +224,9 @@ footer{
 }
 
 .van-type {
+  text-align: center;
   height: 34px;
+  max-width: 150px;
   padding: 6px 26px;
   font-style: normal;
   font-weight: 500;
@@ -180,6 +235,7 @@ footer{
   background-color: #ffead0;
   color: #4d4d4d;
   transition: 200ms all cubic-bezier(0.4, 0, 0.2, 1);
+  margin-bottom: 20px;
 }
 
 .van-type:hover {
@@ -257,6 +313,119 @@ footer{
   border-radius: 6px;
   font-size: 18px;
   padding: 5px 20px;
+}
+
+.van-image{
+  max-height: 500px;
+  object-fit:scale-down;
+  margin-right: 30px;
+}
+
+.host-navlink{
+  margin-left: 40px;
+}
+
+.van-detail-element{
+  border: red solid 1px;
+  margin: auto;
+  display: flex;
+  width: fit-content;
+  flex-direction: row;
+  align-items: center;
+  justify-items: center;
+  margin-top: 57px;
+}
+
+.van-info p{
+  min-width: 100px;
+  max-width: 500px;
+  text-wrap: wrap;
+}
+
+/*HostVan*/
+
+.host-nav-container{
+  margin: 30px; 
+}
+
+.host-nav-container nav a{
+  text-decoration: none;
+  color: #4d4d4d;
+  font-weight: 500;
+}
+
+.dashboard-container{
+  margin-left: 40px;
+}
+
+.dashboard-container section{
+  margin-top: 70px;
+}
+
+/*Income page*/
+.income-container{
+  margin: 0px 40px;
+
+}
+
+.transaction{
+  
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.listed-vans-header{
+  display: flex;
+  justify-content: space-between;
+  padding-right: 40px;
+}
+
+.host-vans-container a{
+  text-decoration: none;
+}
+
+.host-van-card{
+  cursor: pointer;
+  max-width: 800px;
+  display: flex;
+  margin-bottom: 50px;
+  margin-right: 40px;
+  background-color: white;
+}
+
+.host-van-card:hover{
+  background-color: rgb(204, 157, 54);
+}
+
+.host-van-card img{
+  height: 100px;
+  margin-right: 40px;
+}
+
+.host-van-card-details{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.host-vans-container{
+  margin-left: 40px;
+}
+
+.host-vans-container h1{
+  margin: 30px 0;
+}
+
+.host-van-detail-container nav a{
+  margin-right: 20px;
+}
+
+.host-van-detail-container-top{
+}
+
+.host-van-detail-container-top img{
+  height: 200px;
 }
 
 /*LOGIN PAGE*/
