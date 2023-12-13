@@ -1,7 +1,13 @@
 import React from "react";
-import {Link, NavLink} from "react-router-dom";
+import {Link, NavLink, Navigate, useNavigate} from "react-router-dom";
 
 export default function Header() {
+
+  function logout(){
+      //const navigate = useNavigate()
+      localStorage.removeItem("loggedin")
+  }
+
   return (
         <header>
             <Link to = "/">#VANLIFE</Link>
@@ -20,8 +26,8 @@ export default function Header() {
               </NavLink>
               <NavLink to = "/login"
               >
-                
               </NavLink>
+              <button onClick={logout}>Log Out</button>
             </nav>
         </header>
   )

@@ -1,0 +1,1 @@
+1. Make logout button redirect to home page after removing "loggedin" value from localStorage

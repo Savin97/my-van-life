@@ -22,6 +22,18 @@ export default function HostVans() {
         loadVans()
     }, [] )
     
+    if(loading){
+        return <h1>Loading...</h1>
+    }
+
+    if(error){
+        return (
+            <>
+                <h1>Error occured</h1>
+                <Link to="/">Return home</Link>
+            </>
+        )
+    }
 
     return (
         
@@ -30,7 +42,7 @@ export default function HostVans() {
                     Your listed vans
                 </h1>
             {hostVans.map(hostVan => (
-                <Link className="host-van-card" to={hostVan.id}>
+                <Link key={hostVan.id} className="host-van-card" to={hostVan.id}>
                         <img src={hostVan.imageUrl} />
                         <div className="host-van-card-details">
                             <h2>{hostVan.name}</h2>

@@ -17,8 +17,8 @@ export default function Income() {
             
             <h3>Your transactions (3)</h3>
             <p>Last <span>30 days</span></p>
-            {transactionsData.map(transaction => (
-                <div className="transaction">
+            {transactionsData.map( (transaction, index) => (
+                <div key={index} className="transaction">
                     <h1>{transaction.amount}</h1>
                     <h2>{transaction.date}</h2>
                 </div>
