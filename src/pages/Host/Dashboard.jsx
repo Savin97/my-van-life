@@ -62,7 +62,7 @@ export default function Dashboard() {
             <section>
                 <div className="listed-vans-header">
                     <h2>Your listed vans</h2>
-                    <Link to="vans">View all</Link>
+                    <Link className="back-link" to="vans">View all</Link>
                 </div>
                 {loading && !hostVans ? "" 
                 : renderHostVans(hostVans) }
