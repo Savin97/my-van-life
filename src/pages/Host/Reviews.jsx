@@ -37,7 +37,7 @@ export default function Reviews() {
             </div>
             <img
                 className="graph col-lg-6 col-md-9 col-sm-12"
-                src="/src/images/reviews-graph.png"
+                src="../../images/reviews-graph.png"
                 alt="Review graph"
             />
             <h3>Reviews (2)</h3>
