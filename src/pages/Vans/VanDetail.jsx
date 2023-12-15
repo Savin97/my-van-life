@@ -43,6 +43,7 @@ export default function VanDetail(){
             <br/>
             <Link className="back-link-vans" to ="/vans">← Back to all vans</Link>
             {van && 
+                <>
                 <div className="van-detail-element">
                     <img className="van-image" src={van.imageUrl} alt="Van"/>
                     <div className="van-info">
@@ -51,7 +52,12 @@ export default function VanDetail(){
                             <p>${van.price}/day</p>
                             <p>{van.description}</p>
                     </div>
+                    
                 </div>
+                    <div className="rent-btn">
+                        Rent this van
+                    </div>
+                </>
             }
         </div>
     )

@@ -37,8 +37,8 @@ export default function HostVans() {
 
     return (
         
-            <div className="host-vans-container">
-                <h1>
+            <div className="main-container">
+                <h1 className="main-container-title">
                     Your listed vans
                 </h1>
             {hostVans.map(hostVan => (

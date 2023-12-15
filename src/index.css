@@ -59,11 +59,15 @@ code {
   flex-direction: column;
 }
 
+section{
+  margin-bottom: 30px;
+}
+
 header{
   display: flex;
   height: 10vh;
   align-items: center;
-  background-color: #eeeeee;
+  background-color: rgb(250, 206, 112);
 }
 
 header nav{
@@ -74,14 +78,14 @@ header nav{
 
 header a {
   text-decoration: none;
-  color: #4d4d4d;
+  color: #000000;
   font-weight: 600;
   margin-left: 40px;
 }
 
 header a:hover{
   text-decoration: underline;
-  color: #4d4d4d;
+  color: #000000;
   font-weight: 700;
   margin-left: 40px;
 
@@ -143,9 +147,10 @@ footer{
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #FFFFFF;
+  font-size: 26px;
+  color: black;
+  font-weight: 400;
   text-decoration: none;
-  text-shadow: 1px 1px black;
   width: 50%;
   height: 60px;
   background-color: rgb(252, 197, 77);
@@ -154,6 +159,7 @@ footer{
 }
 
 .home-container a:hover{
+  color: white;
   background-color: rgb(204, 157, 54) ;
 }
 
@@ -224,7 +230,15 @@ footer{
 /*VAN PAGES*/
 
 .van-card{
+  padding: 10px;
+  border-radius: 5px;
   margin-top: 0;
+  margin-right: 0px;
+  transition: background-color 0.4s ease;
+}
+
+.van-card:hover{
+  background-color: rgb(252, 197, 77);
 }
 
 .van-card a {
@@ -351,6 +365,29 @@ footer{
   text-wrap: wrap;
 }
 
+.rent-btn{
+    margin: 0 auto;
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 30px;
+    width: 50%;
+    height: 60px;
+    background-color: rgb(252, 197, 77);
+    border-radius: 10px;
+    transition: background-color 0.2s ease;
+    cursor: pointer;
+}
+
+.rent-btn:hover{
+  color: white;
+  background-color: rgb(204, 157, 54) ;
+}
+
 /*HostVan*/
 
 .host-nav-container{
@@ -373,8 +410,20 @@ footer{
   font-weight: 700;
 }
 
-.dashboard-container{
-  margin-left: 40px;
+@media (min-width: 390px) {
+  .main-container{
+    margin: 0 10px;
+  }
+}
+
+@media (min-width: 992px) {
+  .main-container{
+    margin: 0 40px;
+  }
+}
+
+.main-container-title{
+  margin: 30px 0;
 }
 
 .dashboard-container section{
@@ -386,9 +435,11 @@ footer{
 }
 
 /*Income page*/
-.income-container{
-  margin: 0px 40px;
 
+.income-container img{
+  max-width: 90%;
+  max-height: 90vh;
+  margin: 30px 0;
 }
 
 .transaction{
@@ -411,8 +462,9 @@ footer{
 
 
 .host-van-card{
+  border-radius: 5px;
   cursor: pointer;
-  max-width: 800px;
+  min-width: 50%;
   display: flex;
   margin-bottom: 50px;
   margin-right: 40px;
@@ -425,6 +477,7 @@ footer{
 }
 
 .host-van-card img{
+  border-radius: 5px;
   height: 100px;
   margin-right: 40px;
 }
@@ -434,10 +487,6 @@ footer{
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-
-.host-vans-container{
-  margin-left: 40px;
 }
 
 .host-vans-container h1{
@@ -489,11 +538,8 @@ footer{
 }
 
 /*REVIEWS PAGE*/
-.host-reviews{
-  margin-left: 40px;
-}
-
 .graph{
+  max-height: 500px;
   margin-bottom: 30px;
 }
 

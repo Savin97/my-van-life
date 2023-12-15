@@ -50,9 +50,9 @@ export default function Dashboard() {
 
 
     return (
-        <div className="dashboard-container">
+        <div className="main-container">
             <section>
-                    <h1>Welcome!</h1>
+                    <h1 className="main-container-title">Welcome!</h1>
                     <p>Income last <span>30 days</span></p>
                     <h2>$3,250</h2>
             </section>
