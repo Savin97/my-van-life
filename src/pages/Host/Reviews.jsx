@@ -1,5 +1,6 @@
 import {Link} from "react-router-dom";
 import { BsStarFill } from "react-icons/bs"
+import reviews_graph from "../../images/reviews-graph.png"
 
 export default function Reviews() {
     const reviewsData = [
@@ -37,7 +38,7 @@ export default function Reviews() {
             </div>
             <img
                 className="graph col-lg-6 col-md-9 col-sm-12"
-                src="../../images/reviews-graph.png"
+                src={reviews_graph}
                 alt="Review graph"
             />
             <h3>Reviews (2)</h3>
