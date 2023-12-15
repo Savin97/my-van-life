@@ -21,7 +21,7 @@ export default function HostVanDetail(){
             }
         }
         loadVan()
-    }, [] )
+    }, [id] )
 
     if(loading){
         return <h1>Loading...</h1>
@@ -41,7 +41,7 @@ export default function HostVanDetail(){
             <Link className="back-link" to = "../vans">← Back to all vans</Link>
             <div className="host-van-detail-container">
                 <div className="host-van-detail-container-top">
-                    <img src={currentVan.imageUrl} />
+                    <img src={currentVan.imageUrl} alt="Van"/>
                     <div className="host-van-card-details">
                         <div className = {`van-type ${currentVan.type} selected`}>{currentVan.type}</div>
                         <h2>{currentVan.name}</h2>

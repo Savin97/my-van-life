@@ -43,7 +43,7 @@ export default function HostVans() {
                 </h1>
             {hostVans.map(hostVan => (
                 <Link key={hostVan.id} className="host-van-card" to={hostVan.id}>
-                        <img src={hostVan.imageUrl} />
+                        <img src={hostVan.imageUrl} alt="Van" />
                         <div className="host-van-card-details">
                             <h2>{hostVan.name}</h2>
                             <p>${hostVan.price}/day</p>

@@ -1,5 +1,5 @@
 import React, {useState} from "react"
-import { useLocation, useNavigate } from "react-router-dom"
+import { useLocation, useNavigate, Link } from "react-router-dom"
 import { loginUser } from "../api"
 
 export default function Login() {
@@ -28,7 +28,6 @@ export default function Login() {
 
     function handleChange(event){
         const {name,value} =  event.target
-        console.log("A", event.target.value)
         setLoginFormData(prevData => {
            return {
                 ...prevData,
@@ -37,10 +36,25 @@ export default function Login() {
         })
     }
 
+    if(error){
+        return (
+            <>
+                <h1>Error occured</h1>
+                <Link to="/">Return home</Link>
+            </>
+        )
+    }
     return(
         <div className="login-container">
-            conditional Sign in first
-            <h1>Sign into your account</h1>
+            {
+                location.state?.message &&
+                <>
+                    <h3 className="login-error">{location.state.message}</h3>
+                    <p style={{fontSize: 20 + "px"}}>Try: user: b@b.com password: p123</p>
+                </>
+            }
+
+            <h1>Log into your account</h1>
 
             <form onSubmit={handleSubmit}>
                 <input

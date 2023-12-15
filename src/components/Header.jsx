@@ -1,12 +1,14 @@
 import React from "react";
-import {Link, NavLink, Navigate, useNavigate} from "react-router-dom";
+import {Link, NavLink, useNavigate} from "react-router-dom";
+
+
 
 export default function Header() {
-
-  function logout(){
-      //const navigate = useNavigate()
-      localStorage.removeItem("loggedin")
-  }
+  const navigate = useNavigate()
+  function logOut(){
+        localStorage.removeItem("loggedin")
+        navigate("/", {replace:true})
+  }  
 
   return (
         <header>
@@ -24,10 +26,15 @@ export default function Header() {
               >
                 Vans
               </NavLink>
-              <NavLink to = "/login"
-              >
+              
+              {!localStorage["loggedin"] 
+               ? <NavLink to = "/login"
+              >Log In
               </NavLink>
-              <button onClick={logout}>Log Out</button>
+              : <NavLink onClick={logOut} to="/" >{`Log Out`}</NavLink>}
+              
+
+              
             </nav>
         </header>
   )

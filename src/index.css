@@ -126,7 +126,15 @@ footer{
 }
 
 .home-container h1{
-  text-shadow: 2px 2px black;
+  font-size: 50px;
+  color: white;
+  text-shadow: 2px 0 black;
+}
+
+.home-container p{
+  font-size: 30px;
+  color: white;
+  text-shadow: 1px 0px black;
 }
 
 .home-container a{
@@ -137,6 +145,7 @@ footer{
   justify-content: center;
   color: #FFFFFF;
   text-decoration: none;
+  text-shadow: 1px 1px black;
   width: 50%;
   height: 60px;
   background-color: rgb(252, 197, 77);
@@ -157,10 +166,10 @@ footer{
   text-align: center;
 }
 
-@media (min-width: 400px) {
+@media (min-width: 1px) {
   .about-page-container img{
     object-fit: cover;
-    height: 50vh;
+    height: 30vh;
     width: 100%;
   }
 }
@@ -201,8 +210,8 @@ footer{
   text-decoration: none;
   background-color: rgb(252, 197, 77);
   color: white;
-  padding: 10px 200px;
-  max-width: 300px;
+  padding: 10px 150px;
+  min-width: 300px;
   border: 0;
   border-radius: 10px;
   min-height: 50px;
@@ -294,6 +303,7 @@ footer{
 }
 
 .van-list-container h1{
+  margin-top: 30px;
   margin-bottom: 20px;
 }
 
@@ -315,16 +325,6 @@ footer{
   flex-shrink: 0;
 }
 
-.type-btn{
-  background: #e17654;
-  color: white;
-  font-weight: 600;
-  border:0;
-  border-radius: 6px;
-  font-size: 18px;
-  padding: 5px 20px;
-}
-
 .van-image{
   max-height: 500px;
   object-fit:scale-down;
@@ -336,7 +336,6 @@ footer{
 }
 
 .van-detail-element{
-  border: red solid 1px;
   margin: auto;
   display: flex;
   width: fit-content;
@@ -457,6 +456,20 @@ footer{
   font-weight: 700;
 }
 
+.back-link-vans{
+  font-size: 18px;
+  margin-left: 40px;
+  text-decoration: none;
+  color: #161616;
+}
+
+.back-link-vans:hover{
+  text-decoration: underline;
+  color: black;
+  font-weight: 700;
+}
+
+
 .host-van-detail-container{
   margin-top: 30px;
 }
@@ -528,4 +541,9 @@ footer{
 
 .login-container form button:hover{
   background-color: rgb(204, 157, 54);
+}
+
+.login-error{
+  color: red;
+  margin-top: 30px;
 }

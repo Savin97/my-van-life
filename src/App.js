@@ -17,7 +17,7 @@ import HostVanPhotos from './pages/Host/HostVanPhotos';
 
 import LogIn from './pages/LogIn';
 import NotFound from "./pages/NotFound"
-import {BrowserRouter, Routes, Route, Link} from "react-router-dom";
+import {BrowserRouter, Routes, Route} from "react-router-dom";
 import "./server"
 import VanDetail from './pages/Vans/VanDetail';
 

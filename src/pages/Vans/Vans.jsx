@@ -45,7 +45,7 @@ export default function Vans() {
                 <div className="van-info">
                     <h2>{van.name}</h2> 
                     <p>${van.price}/day</p>
-                    <div className = {`van-type ${van.type} selected`}>{van.type}</div>
+                    <i className = {`van-type ${van.type} selected`}>{van.type}</i>
                 </div>
             </Link>
         </div>
@@ -70,28 +70,28 @@ export default function Vans() {
     if(error){
         return <h1>Error loading vans, please try again</h1>
     }
-
+    console.log("T", typeFilter)
     return (
         <div className="van-list-container">
             <h1>Explore Our Van Options</h1>
             <div className="type-filters">
                 <button
                     onClick={() => changeFilter("type", "simple")}
-                    className = {`type-btn simple 
+                    className = {`van-type simple 
                         ${typeFilter === "simple" ? "selected" : ""}
-                        `}>Simple
+                        `} >Simple
                 </button>
                 <button
                     onClick={() => changeFilter("type", "luxury")}
-                    className = {`type-btn luxury 
+                    className = {`van-type luxury 
                         ${typeFilter === "luxury" ? "selected" : ""}
-                        `}>Luxury
+                        `} >Luxury
                 </button>
                 <button
                     onClick={() => changeFilter("type", "rugged")}
-                    className = {`type-btn rugged 
+                    className = {`van-type rugged 
                         ${typeFilter === "rugged" ? "selected" : ""}
-                        `}>Rugged
+                        `} >Rugged
                 </button>
                 {
                     typeFilter ? <button

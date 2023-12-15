@@ -41,7 +41,7 @@ export default function VanDetail(){
     return(
         <div>
             <br/>
-            <Link id="back-to-vans-btn" to ="/vans">Back to all vans</Link>
+            <Link className="back-link-vans" to ="/vans">← Back to all vans</Link>
             {van && 
                 <div className="van-detail-element">
                     <img className="van-image" src={van.imageUrl} alt="Van"/>

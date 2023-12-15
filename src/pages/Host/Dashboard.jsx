@@ -32,7 +32,7 @@ export default function Dashboard() {
     function renderHostVans(vans){
         const hostVanElements = vans.map( (hostVan) => (
             <Link key={hostVan.id} className="host-van-card" to={`vans/${hostVan.id}`}>
-                <img src={hostVan.imageUrl} />
+                <img src={hostVan.imageUrl} alt="Van"/>
                 <div className="host-van-card-details">
                     <h2>{hostVan.name}</h2>
                     <p>${hostVan.price}/day</p>

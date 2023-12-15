@@ -89,14 +89,14 @@ export async function loginUser(creds) {
         { method: "post", body: JSON.stringify(creds) }
     )
     const data = await res.json()
-
     if (!res.ok) {
+        console.log("LOG IN FAIL")
         throw {
             message: data.message,
             statusText: res.statusText,
             status: res.status
         }
     }
-
+    console.log("LOG IN SUCCESS")
     return data
 }
